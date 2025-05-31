@@ -3,9 +3,11 @@ import React, { useContext } from 'react';
 import lottie from "../../assets/Lottie/lottite.json";
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
 import LogInWithSocial from '../Shared/LogInWithSocial';
+import { useNavigate } from 'react-router';
 
 const Register = () => {
   const {createUser}=useContext(AuthContext)
+  const navigate =useNavigate()
   const handleRegister=e=>{
     e.preventDefault()
     const form= e.target
@@ -16,6 +18,7 @@ const Register = () => {
     createUser(email,password)
     .then(result=>{
       console.log(result)
+      navigate('/')
     }).catch(error=>{
         console.log(error)
       })

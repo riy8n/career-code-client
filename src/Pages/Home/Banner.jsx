@@ -45,16 +45,11 @@ const Banner = () => {
    }
    >Easiest Way</motion.span>
         </h1>
-        <motion.h1 
+        <h1 
         className="text-5xl font-bold"
-          animate={{
-            rotate:360,
-  
-    transition: { duration: 10 }
-  }}
         >
           to Get Your New Job
-        </motion.h1>
+        </h1>
       <p className="py-6">
        Each month, more than 3 million job seekers turn to
 website in their search for work, making over 140,000
