@@ -10,7 +10,10 @@ const HotJobs = () => {
   useEffect(() => {
     const getJobs = async () => {
       try {
-        const res = await fetch('http://localhost:3000/jobs');
+        const res = await fetch('http://localhost:3000/jobs', {
+          credentials: 'include'
+        });
+
         const data = await res.json();
         setJobs(data);
         setLoading(false);

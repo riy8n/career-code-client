@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import lottie from "../../assets/Lottie/lottite.json";
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
 import LogInWithSocial from '../Shared/LogInWithSocial';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 const Register = () => {
   const {createUser}=useContext(AuthContext)
@@ -44,6 +44,7 @@ const Register = () => {
           <input name='password' type="password" className="input" placeholder="Password" />
          
           <button className="btn btn-neutral mt-4">Register</button>
+        <p>Do you have an account? Please <span className='text-red-400' ><Link to='/signin'>Login</Link></span> </p>
         </fieldset>
       </div>
      </form>

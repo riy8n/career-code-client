@@ -3,6 +3,7 @@ import { AuthContext } from '../../Context/AuthContext/AuthContext';
 import Lottie from 'lottie-react';
 import signin from '../../assets/Lottie/signin.json'
 import LogInWithSocial from '../Shared/LogInWithSocial';
+import { Link } from 'react-router';
 
 const SingIn = () => {
       const {singInUser}=useContext(AuthContext)
@@ -42,6 +43,8 @@ const SingIn = () => {
           <input name='password' type="password" className="input" placeholder="Password" />
          
           <button className="btn btn-neutral mt-4">Register</button>
+         <p>Don't you have any account? Please <span className='text-red-400' ><Link to='/register'>SingUp</Link></span> </p>
+        
         </fieldset>
       </div>
      </form>

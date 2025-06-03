@@ -2,6 +2,7 @@ import React from 'react';
 
 const JobApplicationsRow = ({application,index}) => {
       const {company, title, company_logo} = application;
+      console.log(application)
     return (
        <tr>
             <th>
